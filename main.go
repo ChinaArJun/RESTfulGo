@@ -45,7 +45,6 @@ func pingServer() error {
 		if err == nil && res.StatusCode == http.StatusOK {
 			return nil
 		}
-
 		// 延迟1秒
 		log.Print("time sleep 1 ")
 		time.Sleep(time.Second)

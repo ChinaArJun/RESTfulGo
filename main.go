@@ -2,6 +2,7 @@ package main
 
 import (
 	"RESTfulGo/config"
+	"RESTfulGo/model"
 	"RESTfulGo/router"
 	"errors"
 	"github.com/gin-gonic/gin"
@@ -28,6 +29,10 @@ func main() {
 
 	// 测试日志打印转存效果
 	//testLog()
+
+	// init db
+	model.DB.Init()
+	defer model.DB.Close()
 
 	g := gin.New()
 

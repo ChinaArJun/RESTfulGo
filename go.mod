@@ -6,6 +6,7 @@ require (
 	github.com/fsnotify/fsnotify v1.4.7
 	// 网络请求框架
 	github.com/gin-gonic/gin v1.5.0
+	github.com/jinzhu/gorm v1.9.12
 	// API日志工具
 	github.com/lexkong/log v0.0.0-20180607165131-972f9cd951fc
 	// 工具包

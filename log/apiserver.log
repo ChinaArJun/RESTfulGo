@@ -27,3 +27,16 @@
 {"level":"INFO","timestamp":"2020-01-14 17:32:31.430","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
 {"level":"INFO","timestamp":"2020-01-14 17:33:15.972","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
 {"level":"INFO","timestamp":"2020-01-14 17:33:16.074","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-14 20:39:48.592","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-14 20:39:48.592","file":"RESTfulGo/main.go:76","msg":"time sleep 1 "}
+{"level":"FATAL","timestamp":"2020-01-14 20:39:48.593","file":"RESTfulGo/main.go:50","msg":"pingServer error","data":{"error":"服务检查错误","trace":"goroutine 41 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc00031eae0, 0xc0003f0040, 0x2, 0x2, 0x4, 0x4a4df66, 0x10, 0x4b39a40, 0xc0003fe020, 0x0, ...)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:135 +0x1d4\ngithub.com/lexkong/log/lager.(*logger).log(0xc00031eae0, 0x4, 0x4a4df66, 0x10, 0x4b39a40, 0xc0003fe020, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:123 +0x120\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc00031eae0, 0x4a4df66, 0x10, 0x4b39a40, 0xc0003fe020, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0x4a4df66, 0x10, 0x4b39a40, 0xc0003fe020, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/st_lager.go:162 +0x80\nmain.main.func1()\n\t/Users/arjun/go/src/RESTfulGo/main.go:50 +0x74\ncreated by main.main\n\t/Users/arjun/go/src/RESTfulGo/main.go:47 +0x1b4\n"}}
+{"level":"INFO","timestamp":"2020-01-14 20:40:15.703","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-14 20:40:15.704","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-14 20:42:12.942","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-14 20:42:12.943","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-14 20:53:40.120","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-14 20:53:40.121","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"DEBUG","timestamp":"2020-01-14 20:54:13.913","file":"user/create.go:19","msg":"参数效验失败 { }"}
+{"level":"ERROR","timestamp":"2020-01-14 20:55:33.140","file":"user/create.go:25","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"DEBUG","timestamp":"2020-01-14 20:55:33.140","file":"user/create.go:29","msg":"err type Is ErrUserNotFound"}
+{"level":"DEBUG","timestamp":"2020-01-14 20:56:17.961","file":"user/create.go:19","msg":"参数效验失败 { }"}

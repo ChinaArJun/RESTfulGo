@@ -2,6 +2,7 @@ package router
 
 import (
 	"RESTfulGo/handler/sd"
+	"RESTfulGo/handler/user"
 	"RESTfulGo/router/middleware"
 	"github.com/gin-gonic/gin"
 )
@@ -18,6 +19,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine  {
 	// 一些安全设置
 	g.Use(middleware.Secure)
 	g.Use(mw...)
+
+	u := g.Group("/v1/user")
+	{
+		u.POST("", user.Create)
+	}
 
 	svcd := g.Group("/sd")
 	{

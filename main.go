@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
-	"log"
+	"github.com/lexkong/log"
 	"net/http"
 	"time"
 )
@@ -39,18 +39,14 @@ func main() {
 	go func() {
 		err := pingServer()
 		if err != nil {
-			log.Printf("pingServer error")
+			log.Fatal("pingServer error", err)
 		}
 		// 检查服务成功
-		log.Print("The router been deployed successfully!")
+		log.Info("The router been deployed successfully!")
 	}()
 
-	err := http.ListenAndServe(viper.GetString("addr"),g)
-	log.Printf("开启服服务")
-	if err != nil {
-		log.Printf("error: %s", err.Error())
-	}
-
+	log.Infof("Start to requests on http address: %s", viper.GetString("addr"))
+	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
 
 // API 服务器健康状态自检
@@ -62,7 +58,7 @@ func pingServer() error {
 			return nil
 		}
 		// 延迟1秒
-		log.Print("time sleep 1 ")
+		log.Info("time sleep 1 ")
 		time.Sleep(time.Second)
 	}
 	return errors.New("服务检查错误")

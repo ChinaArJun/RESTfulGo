@@ -1,0 +1,4 @@
+{"level":"INFO","timestamp":"2020-01-14 15:43:31.824","file":"RESTfulGo/main.go:45","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-14 15:45:06.823","file":"RESTfulGo/main.go:48","msg":"开启服服务"}
+{"level":"INFO","timestamp":"2020-01-14 15:45:06.824","file":"RESTfulGo/main.go:49","msg":"Start to listening the incoming requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-14 15:45:06.825","file":"RESTfulGo/main.go:45","msg":"The router been deployed successfully!"}

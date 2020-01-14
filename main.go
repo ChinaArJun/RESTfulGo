@@ -26,6 +26,9 @@ func main() {
 	// 配置文件设置gin运行模式
 	gin.SetMode(viper.GetString("runmode"))
 
+	// 测试日志打印转存效果
+	//testLog()
+
 	g := gin.New()
 
 
@@ -49,6 +52,14 @@ func main() {
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
 
+func testLog()  {
+	for {
+		// 延迟1秒
+		log.Info("2333333333333333333333333333233333333333333333333333333323333333333333333333333333332333333333333333333333333333")
+		time.Sleep(time.Second *2)
+	}
+}
+
 // API 服务器健康状态自检
 func pingServer() error {
 	for i := 9; i < 10 ; i++  {
@@ -57,9 +68,8 @@ func pingServer() error {
 		if err == nil && res.StatusCode == http.StatusOK {
 			return nil
 		}
-		// 延迟1秒
 		log.Info("time sleep 1 ")
-		time.Sleep(time.Second)
+		//time.Sleep(time.Second)
 	}
 	return errors.New("服务检查错误")
 }

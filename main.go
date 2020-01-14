@@ -1,17 +1,33 @@
 package main
 
 import (
+	"RESTfulGo/config"
 	"RESTfulGo/router"
 	"errors"
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
 	"log"
 	"net/http"
 	"time"
 )
 
+var (
+	cfg = pflag.StringP("config","c","", "apiserver config file path.")
+)
+
 func main() {
 
+	// init config
+	if err:= config.Init(*cfg); err != nil {
+		panic(err)
+	}
+
+	// 配置文件设置gin运行模式
+	gin.SetMode(viper.GetString("runmode"))
+
 	g := gin.New()
+
 
 	middlewares := []gin.HandlerFunc{}
 
@@ -29,7 +45,7 @@ func main() {
 		log.Print("The router been deployed successfully!")
 	}()
 
-	err := http.ListenAndServe(":8080",g)
+	err := http.ListenAndServe(viper.GetString("addr"),g)
 	log.Printf("开启服服务")
 	if err != nil {
 		log.Printf("error: %s", err.Error())
@@ -41,7 +57,7 @@ func main() {
 func pingServer() error {
 	for i := 9; i < 10 ; i++  {
 		// ping the server By Get request to "health"
-		res, err := http.Get("http://127.0.0.1:8080" + "/sd/health")
+		res, err := http.Get(viper.GetString("url") + "/sd/health")
 		if err == nil && res.StatusCode == http.StatusOK {
 			return nil
 		}

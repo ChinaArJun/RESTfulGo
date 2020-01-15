@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b11a358-12b1-49fa-8440-f5a8add26663" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/handler/user/delete.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/get.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/list.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/update.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/auth/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/user/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/apiserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/apiserver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/response/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/response/code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/delete.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/update.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

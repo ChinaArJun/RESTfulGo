@@ -1,8 +1,26 @@
-# 手把手教你整合最简洁的GO开发框架：gin + grom + jwt
-# Enterprise-level RESTful API services Project in Go 
+# RESTfulGo
+
+## 手把手教你整合最简洁的GO开发框架：gin + grom + jwt
+## Enterprise-level RESTful API services Project in Go 
+
+## 项目用到的技术
+```
+Http (gin)          #网络框架
+Token（jwt）        #API身份效验
+Mysql (gorm)       #数据库
+FileConf (Viper)   #配置文件读取
+CodeBcrypt (bcrypt) #哈希密码加密
+APIDocSwagger (gin-swagger) #API文档
+TTestAPI (testing)   #测试框架
+APIPProf (go/PProf)  #接口性能测试
+
+Makefile        #管理API项目
+
+
+```
 
 ### 目录结构
-````
+```
 ├── admin.sh                     # 进程的start|stop|status|restart控制文件
 ├── conf                         # 配置文件统一存放目录
 │   ├── config.yaml              # 配置文件
@@ -67,3 +85,7 @@
     ├── gopkg.in
     └── vendor.json
 ```
+
+## License
+
+[MIT license](http://opensource.org/licenses/MIT) © [ArJun](https://github.com/ArJun)

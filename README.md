@@ -6,6 +6,7 @@
 ## 项目用到的技术
 ```
 Http (gin)          #网络框架
+middleware (gin)    #gin中间件实现请求日志和请求拦截
 Token（jwt）        #API身份效验
 Mysql (gorm)       #数据库
 FileConf (Viper)   #配置文件读取
@@ -69,10 +70,10 @@ Makefile        #管理API项目
 ├── README.md                    # API目录README
 ├── router                       # 路由相关处理
 │   ├── middleware               # API服务器用的是Gin Web框架，Gin中间件存放位置
-│   │   ├── auth.go 
-│   │   ├── header.go
-│   │   ├── logging.go
-│   │   └── requestid.go
+│   │   ├── auth.go              # 
+│   │   ├── header.go            # 统一请求头
+│   │   ├── logging.go           # 日志记录中间件
+│   │   └── requestid.go         # 生成请求ID中间件
 │   └── router.go
 ├── service                      # 实际业务处理函数存放位置
 │   └── service.go

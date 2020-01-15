@@ -199,3 +199,32 @@
 {"level":"INFO","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:55","msg":"desc = "}
 {"level":"INFO","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:58","msg":"Header contentType = application/json"}
 {"level":"DEBUG","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:60","msg":"username is [konss232], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 20:32:32.033","file":"RESTfulGo/main.go:55","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 20:32:32.034","file":"RESTfulGo/main.go:52","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 20:32:42.915","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 20:32:42.915","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 20:32:42.915","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 20:32:42.915","file":"user/create.go:60","msg":"username is [konss232], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 20:32:43.012","file":"user/create.go:72","msg":"ErrDatabase","data":{"error":"Error 1062: Duplicate entry 'konss232' for key 'username'"}}
+{"level":"INFO","timestamp":"2020-01-15 20:32:43.013","file":"middleware/logging.go:85","msg":"98.015ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2020-01-15 20:32:56.588","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 20:32:56.588","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 20:32:56.588","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 20:32:56.589","file":"user/create.go:60","msg":"username is [konss2233], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 20:32:56.686","file":"middleware/logging.go:85","msg":"97.975ms      | 127.0.0.1    | POST /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2020-01-15 20:35:17.940","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 20:35:17.940","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 20:35:17.940","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 20:35:17.940","file":"user/create.go:60","msg":"username is [konss2233], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 20:35:18.035","file":"user/create.go:72","msg":"ErrDatabase","data":{"error":"Error 1062: Duplicate entry 'konss2233' for key 'username'"}}
+{"level":"INFO","timestamp":"2020-01-15 20:35:18.035","file":"middleware/logging.go:85","msg":"95.169ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2020-01-15 20:42:37.658","file":"RESTfulGo/main.go:55","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 20:42:37.659","file":"RESTfulGo/main.go:52","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 20:43:19.534","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 20:43:19.535","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 20:43:19.535","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 20:43:19.535","file":"user/create.go:60","msg":"username is [konss2233], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 20:43:19.636","file":"user/create.go:72","msg":"ErrDatabase","data":{"error":"Error 1062: Duplicate entry 'konss2233' for key 'username'"}}
+{"level":"INFO","timestamp":"2020-01-15 20:43:19.636","file":"middleware/logging.go:87","msg":"13.321475s    | 127.0.0.1    | curl/7.64.1 POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"DEBUG","timestamp":"2020-01-15 20:44:13.105","file":"user/create.go:27","msg":"参数效验失败 { }"}
+{"level":"INFO","timestamp":"2020-01-15 20:44:13.106","file":"middleware/logging.go:87","msg":"2.71724s      | 127.0.0.1    | Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36 POST /v1/user | {code: 10001, message: invalid character 'u' looking for beginning of value}"}

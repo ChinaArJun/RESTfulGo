@@ -20,6 +20,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine  {
 	g.Use(middleware.Secure)
 	g.Use(mw...)
 
+	// 设置请求ID生成全局中间件
+	g.Use(middleware.RequestId())
+	// 请求信息中间件
+	g.Use(middleware.Logging())
+
 	u := g.Group("/v1/user")
 	{
 		u.POST("", user.Create) //创建用户

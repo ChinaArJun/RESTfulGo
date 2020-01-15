@@ -6,9 +6,9 @@ import (
 	"RESTfulGo/router"
 	"errors"
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
-	"github.com/lexkong/log"
 	"net/http"
 	"time"
 )
@@ -35,7 +35,6 @@ func main() {
 	defer model.DB.Close()
 
 	g := gin.New()
-
 
 	middlewares := []gin.HandlerFunc{}
 

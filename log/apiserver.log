@@ -40,3 +40,68 @@
 {"level":"ERROR","timestamp":"2020-01-14 20:55:33.140","file":"user/create.go:25","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
 {"level":"DEBUG","timestamp":"2020-01-14 20:55:33.140","file":"user/create.go:29","msg":"err type Is ErrUserNotFound"}
 {"level":"DEBUG","timestamp":"2020-01-14 20:56:17.961","file":"user/create.go:19","msg":"参数效验失败 { }"}
+{"level":"INFO","timestamp":"2020-01-15 14:09:47.103","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:09:47.103","file":"RESTfulGo/main.go:76","msg":"time sleep 1 "}
+{"level":"FATAL","timestamp":"2020-01-15 14:09:47.104","file":"RESTfulGo/main.go:50","msg":"pingServer error","data":{"error":"服务检查错误","trace":"goroutine 5 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc00030aba0, 0xc0003d40a0, 0x2, 0x2, 0x4, 0x4a50ba8, 0x10, 0x4b3c9e0, 0xc0003b00f0, 0x0, ...)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:135 +0x1d4\ngithub.com/lexkong/log/lager.(*logger).log(0xc00030aba0, 0x4, 0x4a50ba8, 0x10, 0x4b3c9e0, 0xc0003b00f0, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:123 +0x120\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc00030aba0, 0x4a50ba8, 0x10, 0x4b3c9e0, 0xc0003b00f0, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0x4a50ba8, 0x10, 0x4b3c9e0, 0xc0003b00f0, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/st_lager.go:162 +0x80\nmain.main.func1()\n\t/Users/arjun/go/src/RESTfulGo/main.go:50 +0x74\ncreated by main.main\n\t/Users/arjun/go/src/RESTfulGo/main.go:47 +0x1b4\n"}}
+{"level":"INFO","timestamp":"2020-01-15 14:10:48.905","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:10:48.907","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 14:10:49.553","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:10:49.554","file":"RESTfulGo/main.go:57","msg":"listen tcp :7777: bind: address already in use"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:39:32.065","file":"user/create.go:19","msg":"参数效验失败 { }"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:39:50.212","file":"user/create.go:19","msg":"参数效验失败 { }"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:40:27.232","file":"user/create.go:19","msg":"参数效验失败 { }"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:40:37.986","file":"user/create.go:19","msg":"参数效验失败 { }"}
+{"level":"INFO","timestamp":"2020-01-15 14:41:05.205","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:41:05.308","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 14:47:04.361","file":"user/create.go:26","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:47:04.361","file":"user/create.go:29","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 14:47:04.361","file":"user/create.go:32","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:47:04.361","file":"user/create.go:34","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:47:04.361","file":"user/create.go:37","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:47:34.785","file":"user/create.go:26","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:47:34.786","file":"user/create.go:29","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 14:47:34.786","file":"user/create.go:32","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:47:34.786","file":"user/create.go:34","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:47:34.786","file":"user/create.go:37","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:48:16.982","file":"user/create.go:26","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:48:24.717","file":"user/create.go:29","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 14:48:58.870","file":"user/create.go:32","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:48:58.871","file":"user/create.go:34","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:48:58.871","file":"user/create.go:37","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:49:09.752","file":"user/create.go:26","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:49:09.752","file":"user/create.go:29","msg":"desc = 123321"}
+{"level":"INFO","timestamp":"2020-01-15 14:49:09.752","file":"user/create.go:32","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:49:09.752","file":"user/create.go:34","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:49:09.752","file":"user/create.go:37","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:51:09.256","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:51:09.258","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 14:51:13.958","file":"user/create.go:24","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:51:13.959","file":"user/create.go:28","msg":"desc = 123321"}
+{"level":"INFO","timestamp":"2020-01-15 14:51:13.959","file":"user/create.go:31","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:51:13.959","file":"user/create.go:33","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:51:13.959","file":"user/create.go:36","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:51:20.181","file":"user/create.go:24","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:51:20.181","file":"user/create.go:28","msg":"desc = 123321"}
+{"level":"INFO","timestamp":"2020-01-15 14:51:20.181","file":"user/create.go:31","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:51:20.181","file":"user/create.go:33","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:51:43.165","file":"user/create.go:36","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:52:48.022","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:52:48.023","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 14:54:10.793","file":"user/create.go:24","msg":"username = admin"}
+{"level":"INFO","timestamp":"2020-01-15 14:54:10.793","file":"user/create.go:28","msg":"desc = 123321"}
+{"level":"INFO","timestamp":"2020-01-15 14:54:10.793","file":"user/create.go:31","msg":"Header contentType = application/x-www-form-urlencoded"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:54:10.793","file":"user/create.go:33","msg":"username is [], password is []"}
+{"level":"ERROR","timestamp":"2020-01-15 14:55:17.348","file":"user/create.go:36","msg":"参数不能为空","data":{"error":"Err - code: 20102, message: The user was not found, error: 参数不能为空"}}
+{"level":"INFO","timestamp":"2020-01-15 14:55:18.745","file":"user/create.go:24","msg":"username = admin2"}
+{"level":"INFO","timestamp":"2020-01-15 14:55:18.745","file":"user/create.go:28","msg":"desc = test"}
+{"level":"INFO","timestamp":"2020-01-15 14:55:18.745","file":"user/create.go:31","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:55:18.745","file":"user/create.go:33","msg":"username is [admin], password is [admin]"}
+{"level":"INFO","timestamp":"2020-01-15 14:57:02.882","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:57:02.882","file":"RESTfulGo/main.go:76","msg":"time sleep 1 "}
+{"level":"FATAL","timestamp":"2020-01-15 14:57:02.882","file":"RESTfulGo/main.go:50","msg":"pingServer error","data":{"error":"服务检查错误","trace":"goroutine 41 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc000320a80, 0xc0003e8040, 0x2, 0x2, 0x4, 0x4a50bd2, 0x10, 0x4b3ca20, 0xc0003f6020, 0x0, ...)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:135 +0x1d4\ngithub.com/lexkong/log/lager.(*logger).log(0xc000320a80, 0x4, 0x4a50bd2, 0x10, 0x4b3ca20, 0xc0003f6020, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:123 +0x120\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc000320a80, 0x4a50bd2, 0x10, 0x4b3ca20, 0xc0003f6020, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0x4a50bd2, 0x10, 0x4b3ca20, 0xc0003f6020, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/st_lager.go:162 +0x80\nmain.main.func1()\n\t/Users/arjun/go/src/RESTfulGo/main.go:50 +0x74\ncreated by main.main\n\t/Users/arjun/go/src/RESTfulGo/main.go:47 +0x1b4\n"}}
+{"level":"INFO","timestamp":"2020-01-15 14:57:23.802","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 14:57:23.905","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 14:57:30.832","file":"user/create.go:24","msg":"username = admin2"}
+{"level":"INFO","timestamp":"2020-01-15 14:57:30.832","file":"user/create.go:28","msg":"desc = test"}
+{"level":"INFO","timestamp":"2020-01-15 14:57:30.833","file":"user/create.go:31","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 14:57:30.833","file":"user/create.go:33","msg":"username is [admin], password is [admin]"}

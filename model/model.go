@@ -23,3 +23,6 @@ type UserInfo struct {
 	UpdatedAt string `json:"updatedAt"`
 }
 
+type Token struct {
+	Token string `json:"token"`
+}

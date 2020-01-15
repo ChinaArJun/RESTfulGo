@@ -8,8 +8,8 @@ import (
 )
 // 这里设置请求头属性
 
-// NoCache is a middleware function that appends headers
-// to prevent the client from caching the HTTP response.
+//// NoCache is a middleware function that appends headers
+//// to prevent the client from caching the HTTP response.
 func NoCache(c *gin.Context) {
 	c.Header("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate, value")
 	c.Header("Expires", "Thu, 01 Jan 1970 00:00:00 GMT")

@@ -3,6 +3,7 @@ addr: :7777                  # HTTP绑定端口
 name: apiserver              # API Server的名字
 url: http://127.0.0.1:7777   # pingServer函数请求的API服务器的ip:port
 max_ping_count: 10           # pingServer函数尝试的次数
+jwt_secret: eyJpYXQiOjE1MjgwMTY5MjIsImlkIjowLCJuYmY #jwt Token Signature 签名秘钥
 log:
   writers: file,stdout
   logger_level: DEBUG      # 日志级别，DEBUG、INFO、WARN、ERROR、FATAL

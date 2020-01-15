@@ -22,10 +22,13 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine  {
 
 	// 设置请求ID生成全局中间件
 	g.Use(middleware.RequestId())
-	// 请求信息中间件
+	// 请求信息中间件  - 会消耗一些性能
 	g.Use(middleware.Logging())
 
+	g.POST("/login", user.Login)
+
 	u := g.Group("/v1/user")
+	u.Use(middleware.AuthMiddleware())
 	{
 		u.POST("", user.Create) //创建用户
 		u.DELETE("/:id", user.Delete) //删除用户

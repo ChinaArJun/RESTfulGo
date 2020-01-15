@@ -20,15 +20,18 @@ import (
  */
 
 func Create(g *gin.Context)  {
-	var r  CreateRequest
+	var r  = CreateRequest{
+		Username: g.PostForm("username"),
+		Password: g.PostForm("password"),
+	}
 	var err error
 
-	if err := g.ShouldBindJSON(&r); err != nil {
-		log.Debugf("参数效验失败 %s", r)
-		//g.JSON(http.StatusOK, gin.H{"error": response.ErrBind})
-		SendResponse(g, err, nil)
-		return
-	}
+	//if err := g.ShouldBindJSON(&r); err != nil {
+	//	log.Debugf("参数效验失败 %s", r)
+	//	//g.JSON(http.StatusOK, gin.H{"error": response.ErrBind})
+	//	SendResponse(g, err, nil)
+	//	return
+	//}
 	
 	// 效验参数
 	if err := r.checkParam(); err != nil {
@@ -46,11 +49,11 @@ func Create(g *gin.Context)  {
 		return
 	}
 	
-	// post获取到的参数
+	//
 	username := g.Param("username")
 	log.Infof("username = %s", username)
 
-	// url获取到的参数
+	//
 	desc := g.Query("desc")
 	log.Infof("desc = %s", desc)
 

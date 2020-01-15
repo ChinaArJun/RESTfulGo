@@ -21,6 +21,12 @@ func (u *UserModel) Create() error  {
 	return DB.Self.Create(&u).Error
 }
 
+func GetUser(username string) (*UserModel, error) {
+	model := &UserModel{}
+	db := DB.Self.Where("username = ?",username).First(&model)
+	return model, db.Error
+}
+
 // 加密密码
 func (u *UserModel) Encrypt() (err error)  {
 	u.Password, err = auth.Encrypt(u.Password)

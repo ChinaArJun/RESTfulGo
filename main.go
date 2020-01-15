@@ -57,7 +57,7 @@ func main() {
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
 
-func testLog()  {
+func testLogInfo()  {
 	for {
 		// 延迟1秒
 		log.Info("2333333333333333333333333333233333333333333333333333333323333333333333333333333333332333333333333333333333333333")

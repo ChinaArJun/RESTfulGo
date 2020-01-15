@@ -105,3 +105,97 @@
 {"level":"INFO","timestamp":"2020-01-15 14:57:30.832","file":"user/create.go:28","msg":"desc = test"}
 {"level":"INFO","timestamp":"2020-01-15 14:57:30.833","file":"user/create.go:31","msg":"Header contentType = application/json"}
 {"level":"DEBUG","timestamp":"2020-01-15 14:57:30.833","file":"user/create.go:33","msg":"username is [admin], password is [admin]"}
+{"level":"INFO","timestamp":"2020-01-15 17:04:20.078","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:04:20.181","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:06:49.397","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:06:49.399","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:06:50.220","file":"user/create.go:27","msg":"参数效验失败 { }"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:10:39.024","file":"user/create.go:27","msg":"参数效验失败 { }"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:12:00.229","file":"user/create.go:27","msg":"参数效验失败 { }"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:12:04.960","file":"user/create.go:27","msg":"参数效验失败 { }"}
+{"level":"INFO","timestamp":"2020-01-15 17:14:05.490","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:14:05.492","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:16:21.256","file":"user/create.go:27","msg":"参数效验失败 { }"}
+{"level":"INFO","timestamp":"2020-01-15 17:19:20.266","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:19:20.267","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:19:20.267","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:19:20.267","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 17:20:03.827","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:20:03.828","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:20:03.828","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:20:03.828","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 17:20:26.001","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:20:26.001","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:20:26.001","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:20:26.001","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 17:22:08.909","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:22:08.912","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:23:00.512","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:23:00.513","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:23:00.513","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:23:00.513","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:23:04.295","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1146: Table 'db_apiserver.user_models' doesn't exist"}}
+{"level":"INFO","timestamp":"2020-01-15 17:27:59.273","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:27:59.274","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:28:13.228","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:28:13.228","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:28:13.228","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:28:13.228","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:28:13.230","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1146: Table 'db_apiserver.user_models' doesn't exist"}}
+{"level":"INFO","timestamp":"2020-01-15 17:28:32.283","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:28:32.284","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:28:33.732","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:28:33.732","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:28:33.732","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:28:33.732","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:28:33.734","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1054: Unknown column 'created_at' in 'field list'"}}
+{"level":"INFO","timestamp":"2020-01-15 17:29:16.745","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:29:16.745","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:29:16.745","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:29:16.745","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:29:29.848","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1054: Unknown column 'created_at' in 'field list'"}}
+{"level":"INFO","timestamp":"2020-01-15 17:37:27.650","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:37:27.650","file":"RESTfulGo/main.go:76","msg":"time sleep 1 "}
+{"level":"FATAL","timestamp":"2020-01-15 17:37:27.650","file":"RESTfulGo/main.go:50","msg":"pingServer error","data":{"error":"服务检查错误","trace":"goroutine 41 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc000312ae0, 0xc00000e540, 0x2, 0x2, 0x4, 0x4a53652, 0x10, 0x4b3f980, 0xc000020540, 0x0, ...)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:135 +0x1d4\ngithub.com/lexkong/log/lager.(*logger).log(0xc000312ae0, 0x4, 0x4a53652, 0x10, 0x4b3f980, 0xc000020540, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:123 +0x120\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc000312ae0, 0x4a53652, 0x10, 0x4b3f980, 0xc000020540, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0x4a53652, 0x10, 0x4b3f980, 0xc000020540, 0x0, 0x0, 0x0)\n\t/Users/arjun/go/pkg/mod/github.com/lexkong/log@v0.0.0-20180607165131-972f9cd951fc/st_lager.go:162 +0x80\nmain.main.func1()\n\t/Users/arjun/go/src/RESTfulGo/main.go:50 +0x74\ncreated by main.main\n\t/Users/arjun/go/src/RESTfulGo/main.go:47 +0x1b4\n"}}
+{"level":"INFO","timestamp":"2020-01-15 17:37:35.742","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:37:35.845","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:37:38.017","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:37:38.017","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:37:38.017","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:37:38.017","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 17:38:43.156","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:38:43.158","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:39:14.469","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:39:14.469","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:39:14.469","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:39:14.470","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:39:16.315","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1054: Unknown column 'created_at' in 'field list'"}}
+{"level":"INFO","timestamp":"2020-01-15 17:39:42.608","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:39:42.609","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:39:52.350","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:39:52.350","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:39:52.350","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:39:52.350","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:39:54.017","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1054: Unknown column 'created_at' in 'field list'"}}
+{"level":"INFO","timestamp":"2020-01-15 17:41:39.127","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:41:39.129","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:41:41.806","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:41:41.806","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:41:41.806","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:41:41.806","file":"user/create.go:60","msg":"username is [kong], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:41:44.816","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1062: Duplicate entry 'kong' for key 'username'"}}
+{"level":"INFO","timestamp":"2020-01-15 17:42:08.999","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:42:08.999","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:42:08.999","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:42:08.999","file":"user/create.go:60","msg":"username is [konss], password is [kong123]"}
+{"level":"INFO","timestamp":"2020-01-15 17:56:15.273","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:56:15.273","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:56:15.273","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:56:15.273","file":"user/create.go:60","msg":"username is [konss], password is [kong123]"}
+{"level":"ERROR","timestamp":"2020-01-15 17:56:15.276","file":"user/create.go:65","msg":"ErrDatabase","data":{"error":"Error 1062: Duplicate entry 'konss' for key 'username'"}}
+{"level":"INFO","timestamp":"2020-01-15 17:56:23.502","file":"RESTfulGo/main.go:56","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-15 17:56:23.504","file":"RESTfulGo/main.go:53","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:51","msg":"username = "}
+{"level":"INFO","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:55","msg":"desc = "}
+{"level":"INFO","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:58","msg":"Header contentType = application/json"}
+{"level":"DEBUG","timestamp":"2020-01-15 17:56:31.397","file":"user/create.go:60","msg":"username is [konss232], password is [kong123]"}

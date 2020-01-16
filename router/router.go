@@ -1,10 +1,13 @@
 package router
 
 import (
+	_ "RESTfulGo/docs" // 注册swag目录
 	"RESTfulGo/handler/sd"
 	"RESTfulGo/handler/user"
 	"RESTfulGo/router/middleware"
 	"github.com/gin-gonic/gin"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
 func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
@@ -26,6 +29,8 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.Use(middleware.Logging())
 
 	g.POST("/login", user.Login)
+
+	g.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	u := g.Group("/v1/user")
 	u.Use(middleware.AuthMiddleware())

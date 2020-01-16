@@ -18,6 +18,7 @@ require (
 	github.com/spf13/pflag v1.0.3
 	// 配置文件读取
 	github.com/spf13/viper v1.6.1
+	github.com/teris-io/shortid v0.0.0-20171029131806-771a37caa5cf
 	github.com/willf/pad v0.0.0-20190207183901-eccfe5d84172
 	golang.org/x/crypto v0.0.0-20191205180655-e7c4368fe9dd
 	gopkg.in/go-playground/validator.v9 v9.31.0

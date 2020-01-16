@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func List(g *gin.Context)  {
+func List(g *gin.Context) {
 
 	g.JSON(http.StatusOK, handler.Result{
 		Code:    200,

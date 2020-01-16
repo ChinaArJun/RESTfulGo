@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func Delete(g *gin.Context)  {
+func Delete(g *gin.Context) {
 
 	g.JSON(http.StatusOK, handler.Result{
 		Code:    200,

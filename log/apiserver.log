@@ -317,3 +317,5 @@
 {"level":"INFO","timestamp":"2020-01-16 00:46:41.303","file":"user/create.go:61","msg":"Header contentType = application/x-www-form-urlencoded"}
 {"level":"DEBUG","timestamp":"2020-01-16 00:46:41.303","file":"user/create.go:63","msg":"username is [konss223433], password is [kong123]"}
 {"level":"INFO","timestamp":"2020-01-16 00:46:41.404","file":"middleware/logging.go:88","msg":"101.342ms     | 127.0.0.1    | Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36 POST /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2020-01-16 18:29:02.525","file":"RESTfulGo/main.go:54","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-01-16 18:29:02.526","file":"RESTfulGo/main.go:51","msg":"The router been deployed successfully!"}

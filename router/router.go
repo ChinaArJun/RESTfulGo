@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine  {
+func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// 设置请求的Header 参数
 	// 在处理某些请求时可能因为程序 bug 或者其他异常情况导致程序 panic，
 	// 这时候为了不影响下一次请求的调用，需要通过 gin.Recovery()来恢复 API 服务器
@@ -30,11 +30,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine  {
 	u := g.Group("/v1/user")
 	u.Use(middleware.AuthMiddleware())
 	{
-		u.POST("", user.Create) //创建用户
+		u.POST("", user.Create)       //创建用户
 		u.DELETE("/:id", user.Delete) //删除用户
-		u.PUT("/:id", user.Update) // 更新用户
-		u.GET("", user.List) //用户列表
-		u.GET("/:id", user.Get) //获取指定用户的数据
+		u.PUT("/:id", user.Update)    // 更新用户
+		u.GET("", user.List)          //用户列表
+		u.GET("/:id", user.Get)       //获取指定用户的数据
 	}
 
 	svcd := g.Group("/sd")
@@ -44,7 +44,6 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine  {
 		svcd.GET("/cpu", sd.CPUCheck)
 		svcd.GET("/ram", sd.RAMCheck)
 	}
-
 
 	return g
 }

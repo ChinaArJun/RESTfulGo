@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
-
 )
 
 /**
@@ -17,10 +16,10 @@ import (
 加密密码
 在数据库中添加数据记录
 返回结果（这里是用户名）
- */
+*/
 
-func Create(g *gin.Context)  {
-	var r  = CreateRequest{
+func Create(g *gin.Context) {
+	var r = CreateRequest{
 		Username: g.PostForm("username"),
 		Password: g.PostForm("password"),
 	}
@@ -32,23 +31,23 @@ func Create(g *gin.Context)  {
 	//	SendResponse(g, err, nil)
 	//	return
 	//}
-	
+
 	// 效验参数
 	if err := r.checkParam(); err != nil {
 		SendResponse(g, err, nil)
 		return
 	}
-	
+
 	user := model.UserModel{
-		Username:  r.Username,
-		Password:  r.Password,
+		Username: r.Username,
+		Password: r.Password,
 	}
 
 	if err := user.Validate(); err != nil {
 		SendResponse(g, response.ErrValidation, nil)
 		return
 	}
-	
+
 	//
 	username := g.Param("username")
 	log.Infof("username = %s", username)
@@ -62,17 +61,16 @@ func Create(g *gin.Context)  {
 
 	log.Debugf("username is [%s], password is [%s]", r.Username, r.Password)
 
-
 	// 密码加密
 	if err := user.Encrypt(); err != nil {
 		log.Errorf(err, "Encrypt error")
 		SendResponse(g, response.ErrEncrypt, nil)
 		return
 	}
-	
+
 	// 新增用户
 	if err := user.Create(); err != nil {
-		log.Errorf( err, "ErrDatabase")
+		log.Errorf(err, "ErrDatabase")
 		SendResponse(g, response.ErrDatabase, nil)
 		return
 	}
@@ -81,16 +79,16 @@ func Create(g *gin.Context)  {
 		log.Debug("err type Is ErrUserNotFound")
 	}
 
-	rsp := CreateResponse{Username:username}
+	rsp := CreateResponse{Username: username}
 
 	//code, message := response.DecodeErr(err)
 	//g.JSON(http.StatusOK, gin.H{"code":code, "message": message})
 	SendResponse(g, nil, rsp)
 }
 
-func (r *CreateRequest) checkParam() error  {
+func (r *CreateRequest) checkParam() error {
 	if r.Username == "" {
-		return response.New(response.ErrUserNotFound,fmt.Errorf("参数不能为空"))
+		return response.New(response.ErrUserNotFound, fmt.Errorf("参数不能为空"))
 	}
 
 	if r.Password == "" {

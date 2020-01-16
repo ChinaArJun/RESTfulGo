@@ -1,6 +1,5 @@
 package middleware
 
-
 import (
 	"RESTfulGo/pkg/response"
 	"bytes"

@@ -57,7 +57,7 @@ func Parse(tokenString string, secret string) (*Context, error) {
 }
 
 // 自动解密
-func ParseRequest(g *gin.Context) (*Context, error)  {
+func ParseRequest(g *gin.Context) (*Context, error) {
 	header := g.Request.Header.Get("Authorization")
 	// load the jwt secret from config
 	secret := viper.GetString("jwt_secret")
@@ -71,18 +71,18 @@ func ParseRequest(g *gin.Context) (*Context, error)  {
 }
 
 // 生成令牌
-func Sign(ctx *gin.Context, c Context, secret string) (tokenString string, err error)  {
+func Sign(ctx *gin.Context, c Context, secret string) (tokenString string, err error) {
 	// Load the jwt secret from the gin config
 	if secret == "" {
 		secret = viper.GetString("jwt_secret")
 	}
 	// the token content 使用id username 生成token令牌
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-		"id": c.ID,
+		"id":       c.ID,
 		"username": c.Username,
-		"nbf": time.Now().Unix(),
-		"iat": time.Now().Unix(),
+		"nbf":      time.Now().Unix(),
+		"iat":      time.Now().Unix(),
 	})
-	tokenString , err = token.SignedString([]byte(secret))
+	tokenString, err = token.SignedString([]byte(secret))
 	return
 }

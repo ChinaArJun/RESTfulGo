@@ -14,13 +14,13 @@ import (
 )
 
 var (
-	cfg = pflag.StringP("config","c","", "apiserver config file path.")
+	cfg = pflag.StringP("config", "c", "", "apiserver config file path.")
 )
 
 func main() {
 
 	// init config
-	if err:= config.Init(*cfg); err != nil {
+	if err := config.Init(*cfg); err != nil {
 		panic(err)
 	}
 
@@ -41,7 +41,6 @@ func main() {
 	// routers
 	router.Load(g, middlewares...)
 
-
 	// 异步协程运行API服务检查
 	go func() {
 		err := pingServer()
@@ -56,17 +55,17 @@ func main() {
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
 
-func testLogInfo()  {
+func testLogInfo() {
 	for {
 		// 延迟1秒
 		log.Info("2333333333333333333333333333233333333333333333333333333323333333333333333333333333332333333333333333333333333333")
-		time.Sleep(time.Second *2)
+		time.Sleep(time.Second * 2)
 	}
 }
 
 // API 服务器健康状态自检
 func pingServer() error {
-	for i := 9; i < 10 ; i++  {
+	for i := 9; i < 10; i++ {
 		// ping the server By Get request to "health"
 		res, err := http.Get(viper.GetString("url") + "/sd/health")
 		if err == nil && res.StatusCode == http.StatusOK {

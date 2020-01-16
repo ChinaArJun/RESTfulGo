@@ -10,4 +10,4 @@ type CreateRequest struct {
 
 type CreateResponse struct {
 	Username string `json:"username"`
-} 
+}

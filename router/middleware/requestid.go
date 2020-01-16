@@ -6,7 +6,7 @@ import (
 )
 
 // 全局中间件 返回全局请求ID
-func RequestId() gin.HandlerFunc  {
+func RequestId() gin.HandlerFunc {
 	return func(g *gin.Context) {
 		requestId := g.Request.Header.Get("X-Request-Id")
 

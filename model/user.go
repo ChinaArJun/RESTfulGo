@@ -17,18 +17,18 @@ func (u *UserModel) TableName() string {
 }
 
 // 新建新用户
-func (u *UserModel) Create() error  {
+func (u *UserModel) Create() error {
 	return DB.Self.Create(&u).Error
 }
 
 func GetUser(username string) (*UserModel, error) {
 	model := &UserModel{}
-	db := DB.Self.Where("username = ?",username).First(&model)
+	db := DB.Self.Where("username = ?", username).First(&model)
 	return model, db.Error
 }
 
 // 加密密码
-func (u *UserModel) Encrypt() (err error)  {
+func (u *UserModel) Encrypt() (err error) {
 	u.Password, err = auth.Encrypt(u.Password)
 	return err
 }
@@ -36,7 +36,7 @@ func (u *UserModel) Encrypt() (err error)  {
 /*
  效验用户参数
 */
-func (u *UserModel)Validate() error {
+func (u *UserModel) Validate() error {
 	validator := validator.New()
 	return validator.Struct(u)
 }

@@ -11,21 +11,21 @@ import (
 )
 
 const (
-	B = 1
+	B  = 1
 	KB = 1024 * B
 	MB = 1024 * KB
 	GB = 2014 * MB
 )
 
 // 健康查询
-func HealthCheck(g *gin.Context)  {
+func HealthCheck(g *gin.Context) {
 	message := "OK"
 	// 返回状态
-	g.String(http.StatusOK,message)
+	g.String(http.StatusOK, message)
 }
 
 // 查询磁盘容量
-func DiskCheck(g *gin.Context)  {
+func DiskCheck(g *gin.Context) {
 	u, _ := disk.Usage("/")
 	usedMB := int(u.Used) / MB
 	usedGB := int(u.Used) / GB
@@ -48,7 +48,7 @@ func DiskCheck(g *gin.Context)  {
 	g.String(status, "\n"+message)
 }
 
-func CPUCheck(g *gin.Context)  {
+func CPUCheck(g *gin.Context) {
 	cores, _ := cpu.Counts(false)
 
 	a, _ := load.Avg()
@@ -71,7 +71,7 @@ func CPUCheck(g *gin.Context)  {
 	g.String(status, "\n"+message)
 }
 
-func RAMCheck(g *gin.Context)  {
+func RAMCheck(g *gin.Context) {
 	u, _ := mem.VirtualMemory()
 
 	usedMB := int(u.Used) / MB

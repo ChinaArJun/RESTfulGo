@@ -10,6 +10,7 @@ create table `tb_user` (
     `id` int(20) unsigned not null auto_increment,
     `username` varchar(255) not null ,
     `password` varchar(255) not null ,
+    `state` int(10) default '1' comment '用户状态 0默认 1删除',
     `createdAt` timestamp null default null,
     `updatedAt` timestamp null default null,
     `deletedAt` timestamp null default null,

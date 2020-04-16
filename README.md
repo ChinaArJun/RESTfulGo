@@ -3,6 +3,8 @@
 ## 手把手教你整合最简洁的GO开发框架：gin + grom + jwt
 ## Enterprise-level RESTful API services Project in Go 
 
+> 运行打开 http://localhost:7777/swagger/index.html 查看接口文档
+
 ## 项目用到的技术
 ```
 Http (gin)          #网络框架
@@ -14,10 +16,7 @@ CodeBcrypt (bcrypt) #哈希密码加密
 APIDocSwagger (gin-swagger) #API文档
 TTestAPI (testing)   #测试框架
 APIPProf (go/PProf)  #接口性能测试
-
 Makefile        #管理API项目
-
-
 ```
 
 ### 目录结构

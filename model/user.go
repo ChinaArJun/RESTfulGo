@@ -21,6 +21,12 @@ func (u *UserModel) Create() error {
 	return DB.Self.Create(&u).Error
 }
 
+// 删除新用户
+func DeleteUser(userId uint64) error {
+	db := DB.Self.Where("id = ?", userId).Update("state", "0")
+	return db.Error
+}
+
 func GetUser(username string) (*UserModel, error) {
 	model := &UserModel{}
 	db := DB.Self.Where("username = ?", username).First(&model)

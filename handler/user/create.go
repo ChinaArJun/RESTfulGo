@@ -24,7 +24,7 @@ import (
 // @Produce  json
 // @Param user body user.CreateRequest true "Create a new user"
 // @Success 200 {object} user.CreateResponse "{"code":0,"message":"OK","data":{"username":"kong"}}"
-// @Router /user [post]
+// @Router /v1/user [post]
 func Create(g *gin.Context) {
 	var r = CreateRequest{
 		Username: g.PostForm("username"),

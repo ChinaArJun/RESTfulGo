@@ -1,4 +1,13 @@
 definitions:
+  handler.Result:
+    properties:
+      code:
+        type: integer
+      data:
+        type: object
+      message:
+        type: string
+    type: object
   user.CreateRequest:
     properties:
       password:
@@ -15,7 +24,29 @@ info:
   contact: {}
   license: {}
 paths:
-  /user:
+  /v1/user:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a new user
+      parameters:
+      - description: Delete a new user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/user.CreateRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":0,"message":"OK","data":{"username":"kong"}}'
+          schema:
+            $ref: '#/definitions/handler.Result'
+      summary: Delete new user to the database
+      tags:
+      - user
     post:
       consumes:
       - application/json

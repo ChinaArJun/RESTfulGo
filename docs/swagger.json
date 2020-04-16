@@ -5,7 +5,7 @@
         "license": {}
     },
     "paths": {
-        "/user": {
+        "/v1/user": {
             "post": {
                 "description": "Add a new user",
                 "consumes": [
@@ -38,10 +38,57 @@
                         }
                     }
                 }
+            },
+            "delete": {
+                "description": "Delete a new user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Delete new user to the database",
+                "parameters": [
+                    {
+                        "description": "Delete a new user",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/user.CreateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":0,\"message\":\"OK\",\"data\":{\"username\":\"kong\"}}",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Result"
+                        }
+                    }
+                }
             }
         }
     },
     "definitions": {
+        "handler.Result": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "data": {
+                    "type": "object"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
         "user.CreateRequest": {
             "type": "object",
             "properties": {

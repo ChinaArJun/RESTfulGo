@@ -6,6 +6,27 @@
     },
     "paths": {
         "/v1/user": {
+            "get": {
+                "description": "Delete a new user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "user"
+                ],
+                "summary": "Delete new user to the database",
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":0,\"message\":\"OK\",\"data\":[{\"username\":\"kong\"},{\"username\":\"kong\"}]}",
+                        "schema": {
+                            "$ref": "#/definitions/user.ListResponse"
+                        }
+                    }
+                }
+            },
             "post": {
                 "description": "Add a new user",
                 "consumes": [
@@ -25,7 +46,6 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "type": "object",
                             "$ref": "#/definitions/user.CreateRequest"
                         }
                     }
@@ -58,7 +78,6 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "type": "object",
                             "$ref": "#/definitions/user.CreateRequest"
                         }
                     }
@@ -89,6 +108,29 @@
                 }
             }
         },
+        "model.UserInfo": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "sayHello": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
         "user.CreateRequest": {
             "type": "object",
             "properties": {
@@ -105,6 +147,28 @@
             "properties": {
                 "username": {
                     "type": "string"
+                }
+            }
+        },
+        "user.GetUserResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            }
+        },
+        "user.ListResponse": {
+            "type": "object",
+            "properties": {
+                "total_count": {
+                    "type": "integer"
+                },
+                "user_list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/model.UserInfo"
+                    }
                 }
             }
         }

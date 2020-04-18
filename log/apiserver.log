@@ -399,3 +399,24 @@
 {"level":"ERROR","timestamp":"2020-04-17 00:27:09.879","file":"middleware/logging.go:79","msg":"response body can not unmarshal to model.Response struct, body: ``","data":{"error":"unexpected end of JSON input"}}
 {"level":"INFO","timestamp":"2020-04-17 00:27:09.879","file":"middleware/logging.go:87","msg":"103µs         | ::1          | curl/7.64.1 DELETE /v1/user | {code: 10001, message: unexpected end of JSON input}"}
 {"level":"INFO","timestamp":"2020-04-17 00:27:12.425","file":"middleware/logging.go:87","msg":"208µs         | ::1          | Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 GET /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"ERROR","timestamp":"2020-04-17 11:04:47.492","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-17 11:04:47.607","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-04-17 11:04:48.132","file":"RESTfulGo/main.go:68","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-04-17 14:15:02.425","file":"config/config.go:75","msg":"config file changed : C:\\Users\\Administrator\\go\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"ERROR","timestamp":"2020-04-17 15:18:42.219","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-17 15:18:42.240","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-04-17 15:18:42.749","file":"RESTfulGo/main.go:68","msg":"The router been deployed successfully!"}
+{"level":"ERROR","timestamp":"2020-04-17 15:36:16.343","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-17 15:36:16.363","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-04-17 15:36:16.867","file":"RESTfulGo/main.go:68","msg":"The router been deployed successfully!"}
+{"level":"ERROR","timestamp":"2020-04-17 15:41:58.402","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-17 15:41:58.421","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-04-17 15:41:58.922","file":"RESTfulGo/main.go:68","msg":"The router been deployed successfully!"}
+{"level":"ERROR","timestamp":"2020-04-17 15:48:36.021","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-17 15:48:36.051","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-04-17 15:48:36.552","file":"RESTfulGo/main.go:68","msg":"The router been deployed successfully!"}
+{"level":"ERROR","timestamp":"2020-04-17 16:01:54.277","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-17 16:01:54.296","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :7777"}
+{"level":"INFO","timestamp":"2020-04-17 16:01:54.800","file":"RESTfulGo/main.go:68","msg":"The router been deployed successfully!"}
+{"level":"INFO","timestamp":"2020-04-17 16:06:46.490","file":"middleware/logging.go:87","msg":"0s            | ::1          | Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36 GET /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2020-04-17 16:06:47.224","file":"middleware/logging.go:87","msg":"997.4µs       | ::1          | Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36 GET /v1/user | {code: 20103, message: The token was invalid.}"}

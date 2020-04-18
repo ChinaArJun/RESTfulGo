@@ -8,6 +8,21 @@ definitions:
       message:
         type: string
     type: object
+  model.UserInfo:
+    properties:
+      createdAt:
+        type: string
+      id:
+        type: integer
+      password:
+        type: string
+      sayHello:
+        type: string
+      updatedAt:
+        type: string
+      username:
+        type: string
+    type: object
   user.CreateRequest:
     properties:
       password:
@@ -19,6 +34,20 @@ definitions:
     properties:
       username:
         type: string
+    type: object
+  user.GetUserResponse:
+    properties:
+      id:
+        type: string
+    type: object
+  user.ListResponse:
+    properties:
+      total_count:
+        type: integer
+      user_list:
+        items:
+          $ref: '#/definitions/model.UserInfo'
+        type: array
     type: object
 info:
   contact: {}
@@ -36,7 +65,6 @@ paths:
         required: true
         schema:
           $ref: '#/definitions/user.CreateRequest'
-          type: object
       produces:
       - application/json
       responses:
@@ -44,6 +72,20 @@ paths:
           description: '{"code":0,"message":"OK","data":{"username":"kong"}}'
           schema:
             $ref: '#/definitions/handler.Result'
+      summary: Delete new user to the database
+      tags:
+      - user
+    get:
+      consumes:
+      - application/json
+      description: Delete a new user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":0,"message":"OK","data":[{"username":"kong"},{"username":"kong"}]}'
+          schema:
+            $ref: '#/definitions/user.ListResponse'
       summary: Delete new user to the database
       tags:
       - user
@@ -58,7 +100,6 @@ paths:
         required: true
         schema:
           $ref: '#/definitions/user.CreateRequest'
-          type: object
       produces:
       - application/json
       responses:

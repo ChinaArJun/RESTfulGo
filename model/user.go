@@ -21,15 +21,29 @@ func (u *UserModel) Create() error {
 	return DB.Self.Create(&u).Error
 }
 
-// 删除新用户
 func DeleteUser(userId uint64) error {
 	db := DB.Self.Where("id = ?", userId).Update("state", "0")
 	return db.Error
 }
 
-func GetUser(username string) (*UserModel, error) {
+func (u *UserModel)UpdateUser() error {
+	return DB.Self.Where("id = ?", u.Id).Update(u).Error
+}
+
+func GetUserList(pagesize int, pagenum int) ([]*UserInfo, int64, error)  {
+	var userList = make([]*UserInfo, 0)
+	var count int64
+
+	db := DB.Self.Where("*").Limit(pagesize).Offset(pagenum).Model(&userList).Count(&count)
+	if db.Error != nil {
+		return nil, 0, db.Error
+	}
+	return userList, count, nil
+}
+
+func GetUser(userId string) (*UserModel, error) {
 	model := &UserModel{}
-	db := DB.Self.Where("username = ?", username).First(&model)
+	db := DB.Self.Where("id = ?", userId).First(&model)
 	return model, db.Error
 }
 

@@ -20,7 +20,7 @@ import (
 func Delete(g *gin.Context) {
 	userId, _ := strconv.ParseUint(g.Param("id"), 10, 64)
 	if err := model.DeleteUser(userId); err != nil {
-		log.Fatal(" delete user err:", err)
+		log.Fatal("delete user err:", err)
 		handler.SendResponse(g, response.ErrDatabase, nil)
 		return
 	}

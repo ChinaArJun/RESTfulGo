@@ -2,6 +2,7 @@ package router
 
 import (
 	_ "RESTfulGo/docs" // 注册swag目录
+	"RESTfulGo/handler/block"
 	"RESTfulGo/handler/sd"
 	"RESTfulGo/handler/user"
 	"RESTfulGo/router/middleware"
@@ -48,6 +49,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		svcd.GET("/disk", sd.DiskCheck)
 		svcd.GET("/cpu", sd.CPUCheck)
 		svcd.GET("/ram", sd.RAMCheck)
+	}
+
+	chain := g.Group("/chaincode")
+	{
+		chain.POST("/contract", block.ContractBlock)
 	}
 
 	return g

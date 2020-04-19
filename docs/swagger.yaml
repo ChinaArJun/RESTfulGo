@@ -65,6 +65,7 @@ paths:
         required: true
         schema:
           $ref: '#/definitions/user.CreateRequest'
+          type: object
       produces:
       - application/json
       responses:
@@ -86,7 +87,7 @@ paths:
           description: '{"code":0,"message":"OK","data":[{"username":"kong"},{"username":"kong"}]}'
           schema:
             $ref: '#/definitions/user.ListResponse'
-      summary: Delete new user to the database
+      summary: 获取用户列表
       tags:
       - user
     post:
@@ -100,6 +101,7 @@ paths:
         required: true
         schema:
           $ref: '#/definitions/user.CreateRequest'
+          type: object
       produces:
       - application/json
       responses:

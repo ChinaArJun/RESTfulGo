@@ -17,7 +17,7 @@
                 "tags": [
                     "user"
                 ],
-                "summary": "Delete new user to the database",
+                "summary": "获取用户列表",
                 "responses": {
                     "200": {
                         "description": "{\"code\":0,\"message\":\"OK\",\"data\":[{\"username\":\"kong\"},{\"username\":\"kong\"}]}",
@@ -46,6 +46,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
+                            "type": "object",
                             "$ref": "#/definitions/user.CreateRequest"
                         }
                     }
@@ -78,6 +79,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
+                            "type": "object",
                             "$ref": "#/definitions/user.CreateRequest"
                         }
                     }

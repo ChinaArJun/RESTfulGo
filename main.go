@@ -12,9 +12,9 @@ import (
 	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
-	"os"
-
 	"net/http"
+	"os"
+	"runtime"
 	"time"
 )
 
@@ -24,6 +24,8 @@ var (
 )
 
 func main() {
+	numbers := runtime.NumCPU()
+	fmt.Println("nums cpu : ", numbers)
 	pflag.Parse()
 	if *version {
 		v := v.Get()

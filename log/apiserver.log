@@ -543,3 +543,26 @@
 {"level":"INFO","timestamp":"2020-04-30 08:52:17.230","file":"RESTfulGo/main.go:90","msg":"Start to requests on http address: :8000"}
 {"level":"INFO","timestamp":"2020-04-30 08:52:17.735","file":"RESTfulGo/main.go:72","msg":"The router been deployed successfully!"}
 {"level":"INFO","timestamp":"2020-04-30 10:55:05.738","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:09:02.268","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:09:02.270","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:12:31.338","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:12:31.339","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"ERROR","timestamp":"2020-04-30 11:31:51.183","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1045: Access denied for user 'arjun'@'localhost' (using password: YES)"}}
+{"level":"ERROR","timestamp":"2020-04-30 11:35:25.766","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1045: Access denied for user 'arjun'@'localhost' (using password: YES)"}}
+{"level":"ERROR","timestamp":"2020-04-30 11:35:54.608","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1045: Access denied for user 'arjun'@'localhost' (using password: YES)"}}
+{"level":"INFO","timestamp":"2020-04-30 11:35:54.604","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :9090"}
+{"level":"INFO","timestamp":"2020-04-30 11:36:25.948","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :9090"}
+{"level":"ERROR","timestamp":"2020-04-30 11:36:26.068","file":"model/init.go:61","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1049: Unknown database 'db_apiserver'"}}
+{"level":"INFO","timestamp":"2020-04-30 11:36:43.267","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:36:43.269","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:37:04.824","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:37:04.825","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:37:17.836","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:37:17.838","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:37:25.289","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :9090"}
+{"level":"ERROR","timestamp":"2020-04-30 11:37:25.417","file":"model/init.go:61","msg":"Database connection failed. Database name: restful","data":{"error":"Error 1049: Unknown database 'restful'"}}
+{"level":"INFO","timestamp":"2020-04-30 11:41:36.155","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:41:36.157","file":"config/config.go:75","msg":"config file changed : D:\\GoWork\\src\\RESTfulGo\\conf\\config.yaml"}
+{"level":"INFO","timestamp":"2020-04-30 11:41:51.062","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :9090"}
+{"level":"INFO","timestamp":"2020-04-30 11:52:45.743","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :9090"}
+{"level":"INFO","timestamp":"2020-04-30 13:37:56.058","file":"RESTfulGo/main.go:71","msg":"Start to requests on http address: :9090"}

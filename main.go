@@ -3,9 +3,7 @@ package main
 import (
 	"RESTfulGo/config"
 	"RESTfulGo/model"
-	v "RESTfulGo/pkg/version"
 	"RESTfulGo/router"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -14,7 +12,6 @@ import (
 	"github.com/spf13/viper"
 	"net/http"
 	_ "net/http/pprof"
-	"os"
 	"runtime"
 	"strconv"
 	"time"
@@ -28,18 +25,18 @@ var (
 func main() {
 	numbers := runtime.NumCPU()
 	fmt.Println("nums cpu : ", numbers)
-	pflag.Parse()
-	if *version {
-		v := v.Get()
-		marshalled, err := json.MarshalIndent(&v, "", "  ")
-		if err != nil {
-			fmt.Printf("%v\n", err)
-			os.Exit(1)
-		}
-
-		fmt.Println(string(marshalled))
-		return
-	}
+	//pflag.Parse()
+	//if *version {
+	//	v := v.Get()
+	//	marshalled, err := json.MarshalIndent(&v, "", "  ")
+	//	if err != nil {
+	//		fmt.Printf("%v\n", err)
+	//		os.Exit(1)
+	//	}
+	//
+	//	fmt.Println(string(marshalled))
+	//	return
+	//}
 	// init config
 	if err := config.Init(*cfg); err != nil {
 		panic(err)
@@ -51,10 +48,6 @@ func main() {
 	// 测试日志打印转存效果
 	//testLog()
 
-	// init db
-	model.DB.Init()
-	//defer model.DB.Close()
-
 	g := gin.New()
 
 	middlewares := []gin.HandlerFunc{}
@@ -62,35 +55,21 @@ func main() {
 	// routers
 	router.Load(g, middlewares...)
 
-	// 异步协程运行API服务检查
-	go func() {
-		err := pingServer()
-		if err != nil {
-			log.Fatal("pingServer error", err)
-		}
-		// 检查服务成功
-		log.Info("The router been deployed successfully!")
-	}()
+	// init db
+	go model.DB.Init()
+	//defer model.DB.Close()
 
-	//s := []int{1,2,3,4,5,6}
-	//chans := make(chan string, 100)
-	//block := ""
-	////for index, value := range s {
-	////
-	////}
-	//for i := 0; i < len(s); i++ {
-	//	fmt.Println("~~~~~", i, s[i])
-	//	go testLog(chans, i, s[i])
-	//	select {
-	//	case block = <-chans:
-	//		fmt.Println("select :", block)
-	//	}
-	//}
+	//cfg := tars.GetServerConfig()
+	//profMux := &tars.TarsHttpMux{}
+	//profMux.HandleFunc("/debug/pprof/", pprof.Index)
+	//profMux.HandleFunc("/debug/pprof/cmdline", pprof.Cmdline)
+	//profMux.HandleFunc("/debug/pprof/profile", pprof.Profile)
+	//profMux.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
+	//profMux.HandleFunc("/debug/pprof/trace", pprof.Trace)
+	//tars.AddHttpServant(profMux, cfg.App+"."+cfg.Server+".ProfObj")
 
 	log.Infof("Start to requests on http address: %s", viper.GetString("addr"))
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
-
-	//s := make()
 
 }
 

@@ -1,7 +1,7 @@
 runmode: debug               # 开发模式, debug, release, test
-addr: :8000                  # HTTP绑定端口
-name: apiserver              # API Server的名字
-url: http://127.0.0.1:8000   # pingServer函数请求的API服务器的ip:port
+addr: :9090                  # HTTP绑定端口
+name: restful                # API Server的名字
+url: http://127.0.0.1:9090   # pingServer函数请求的API服务器的ip:port
 max_ping_count: 10           # pingServer函数尝试的次数
 jwt_secret: eyJpYXQiOjE1MjgwMTY5MjIsImlkIjowLCJuYmY #jwt Token Signature 签名秘钥
 log:
@@ -14,10 +14,10 @@ log:
   log_rotate_size: 1
   log_backup_count: 7  #当日志文件达到转存标准时，log 系统会将该日志文件进行压缩备份，这里指定了备份文件的最大个数
 db:
-  name: db_apiserver
-  addr: 127.0.0.1:3306
-  username: root
-  password: root
+  name: restful
+  addr: 192.144.128.37:3306
+  username: arjun
+  password: arjun
 docker_db:
   name: db_apiserver
   addr: 127.0.0.1:3306

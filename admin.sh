@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER="RESTfulGo"
+SERVER="restful"
 BASE_DIR=$PWD
 INTERVAL=2
 

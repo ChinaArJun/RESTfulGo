@@ -8,5 +8,5 @@ RUN pwd
 RUN make
 #RUN go build -v .
 
-EXPOSE 7777
+EXPOSE 9090
 ENTRYPOINT ["./RESTfulGo"]

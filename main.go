@@ -13,8 +13,10 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"runtime"
+	"strconv"
 	"time"
 )
 
@@ -51,7 +53,7 @@ func main() {
 
 	// init db
 	model.DB.Init()
-	defer model.DB.Close()
+	//defer model.DB.Close()
 
 	g := gin.New()
 
@@ -70,10 +72,31 @@ func main() {
 		log.Info("The router been deployed successfully!")
 	}()
 
+	//s := []int{1,2,3,4,5,6}
+	//chans := make(chan string, 100)
+	//block := ""
+	////for index, value := range s {
+	////
+	////}
+	//for i := 0; i < len(s); i++ {
+	//	fmt.Println("~~~~~", i, s[i])
+	//	go testLog(chans, i, s[i])
+	//	select {
+	//	case block = <-chans:
+	//		fmt.Println("select :", block)
+	//	}
+	//}
+
 	log.Infof("Start to requests on http address: %s", viper.GetString("addr"))
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 
 	//s := make()
+
+}
+
+func testLog(s chan<- string, index, value int) {
+	fmt.Println("testLog:", index, value)
+	s <- "testLog" + strconv.Itoa(value)
 }
 
 func testLogInfo() {

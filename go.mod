@@ -8,6 +8,7 @@ require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fsnotify/fsnotify v1.4.7
+	github.com/gin-contrib/pprof v1.3.0
 	// 网络请求框架
 	github.com/gin-gonic/gin v1.6.2
 	github.com/go-ole/go-ole v1.2.4 // indirect
@@ -18,18 +19,20 @@ require (
 	github.com/golang/protobuf v1.4.0 // indirect
 	github.com/jinzhu/gorm v1.9.12
 	github.com/json-iterator/go v1.1.9 // indirect
-	github.com/labstack/echo/v4 v4.1.16
+	github.com/labstack/echo/v4 v4.1.16 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect
 	// API日志工具
 	github.com/lexkong/log v0.0.0-20180607165131-972f9cd951fc
 	github.com/mailru/easyjson v0.7.1 // indirect
+	github.com/onsi/ginkgo v1.12.0 // indirect
+	github.com/onsi/gomega v1.9.0 // indirect
 	github.com/satori/go.uuid v1.2.0
 	// 工具包
 	github.com/shirou/gopsutil v2.19.12+incompatible
 	github.com/spf13/pflag v1.0.3
 	// 配置文件读取
 	github.com/spf13/viper v1.6.1
-	github.com/swaggo/echo-swagger v1.0.0
+	github.com/swaggo/echo-swagger v1.0.0 // indirect
 	github.com/swaggo/gin-swagger v1.2.0
 	github.com/swaggo/swag v1.6.5
 	github.com/teris-io/shortid v0.0.0-20171029131806-771a37caa5cf

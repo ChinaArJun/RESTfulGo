@@ -6,6 +6,7 @@ import (
 	"RESTfulGo/handler/sd"
 	"RESTfulGo/handler/user"
 	"RESTfulGo/router/middleware"
+	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
@@ -23,6 +24,8 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// 一些安全设置
 	g.Use(middleware.Secure)
 	g.Use(mw...)
+
+	pprof.Register(g)
 
 	// 设置请求ID生成全局中间件
 	g.Use(middleware.RequestId())
@@ -54,6 +57,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	chain := g.Group("/chaincode")
 	{
 		chain.POST("/contract", block.ContractBlock)
+		chain.PATCH("/contract", block.PatchContractBlock)
 	}
 
 	return g

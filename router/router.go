@@ -36,28 +36,45 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 	g.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
-	u := g.Group("/v1/user")
-	u.Use(middleware.AuthMiddleware())
+	mobile := g.Group("mobile")
 	{
-		u.POST("", user.Create)       //创建用户
-		u.DELETE("/:id", user.Delete) //删除用户
-		u.PUT("/:id", user.Update)    // 更新用户
-		u.GET("", user.List)          //用户列表
-		u.GET("/:id", user.Get)       //获取指定用户的数据
+		// 用户
+		u := mobile.Group("v1/user", middleware.AuthMiddleware())
+		{
+			u.POST("", user.Create)    //创建用户
+			u.PUT("/:id", user.Update) // 更新用户
+			u.GET("/:id", user.Get)    //获取指定用户的数据
+		}
 	}
 
-	svcd := g.Group("/sd")
+	admin := g.Group("admin")
 	{
-		svcd.GET("/health", sd.HealthCheck)
-		svcd.GET("/disk", sd.DiskCheck)
-		svcd.GET("/cpu", sd.CPUCheck)
-		svcd.GET("/ram", sd.RAMCheck)
-	}
+		u := admin.Group("user")
+		{
+			u.GET("", nil)
+			u.DELETE("/:id", user.Delete) //删除用户
+			u.PUT("/:id", user.Update)    // 更新用户
+			u.GET("", user.List)          //用户列表
+			u.GET("/:id", user.Get)       //获取指定用户的数据
+		}
+		product := admin.Group("product")
+		{
+			product.GET("", nil)
+		}
 
-	chain := g.Group("/chaincode")
-	{
-		chain.POST("/contract", block.ContractBlock)
-		chain.PATCH("/contract", block.PatchContractBlock)
+		// 服务器的一些配置
+		svcd := admin.Group("/sd")
+		{
+			svcd.GET("/health", sd.HealthCheck)
+			svcd.GET("/disk", sd.DiskCheck)
+			svcd.GET("/cpu", sd.CPUCheck)
+			svcd.GET("/ram", sd.RAMCheck)
+		}
+		chain := admin.Group("/test")
+		{
+			chain.POST("/contract", block.ContractBlock)
+			chain.PATCH("/contract", block.PatchContractBlock)
+		}
 	}
 
 	return g
